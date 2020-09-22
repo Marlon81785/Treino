@@ -54,16 +54,18 @@
                                     <th>Data Prevista Sorteio</th>
                                     <th>Status</th>
                                     <th>Valor por unidade</th>
+                                    <th>Ação</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @while($sorteios = mysqli_fetch_assoc($validar))
                                 <tr>
-                                    <td>{{ ($sorteios['nome_sorteio']) }}</td>
+                                    <td><a href="/sorteio?nSorteio={{ ($sorteios['nome_sorteio']) }}">{{ ($sorteios['nome_sorteio']) }}</a></td>
                                     <td>{{ ($sorteios['quant_rifas']) }}</td>
                                     <td>{{ ($sorteios['data_sorteio']) }}</td>
                                     <td>{{ ($sorteios['status']) }}</td>
                                     <td>{{ ($sorteios['valor_por_unidade']) }}</td>
+                                    <td><button type="button" class="btn btn-success">Compartilhar Link</button></td>
                                 </tr>
                                 @endwhile
                             </tbody>

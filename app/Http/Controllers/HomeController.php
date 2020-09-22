@@ -35,4 +35,9 @@ class HomeController extends Controller
     {
         return view('gerenciar');
     }
+
+    public function sorteio(Request $nSorteio){
+        return view('sorteio', $nSorteio);
+
+    }
 }

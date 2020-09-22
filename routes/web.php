@@ -23,3 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::any('/criarSorteio', 'HomeController@criarSorteio')->name('create');
 Route::any('/gerenciar', 'HomeController@gerenciar')->name('gerenciar');
 
+Route::get('/sorteio', 'HomeController@sorteio')->name('sorteio');
+
+
+
